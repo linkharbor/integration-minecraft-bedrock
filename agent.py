@@ -10,7 +10,7 @@ Bedrock (Bedrock Dedicated Server, Nukkit, PocketMine, Geyser): the RakNet
 "unconnected ping" on UDP 19132. Java (vanilla, Paper, Fabric, …): the
 Server List Ping on TCP 25565 — use --java. Neither protocol exposes who
 joined (only counts; Java lists a sample), so the events are count-based.
-For Java servers with Paper, the plugin in linkharbor-minecraft gives you
+For Java servers with Paper, the plugin in integration-minecraft gives you
 real join/leave events with names.
 
     export LH_INGEST_URL="https://api.linkharbor.com/v1/ingest/123"

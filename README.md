@@ -12,18 +12,18 @@ uses for the server list.
   unconnected ping, UDP 19132.
 * **Java** without a plugin (vanilla, Fabric, Forge, …): Server List Ping,
   TCP 25565 — add `--java`. Running Paper? The plugin in
-  [linkharbor-minecraft](https://github.com/linkharbor/linkharbor-minecraft)
+  [integration-minecraft](https://github.com/linkharbor/integration-minecraft)
   gives you real join/leave events with player names instead.
 
 Standard library only, Python 3.10+. Part of the
-[LinkHarbor integrations](https://github.com/linkharbor/linkharbor-integrations)
+[LinkHarbor integrations](https://github.com/linkharbor/integrations)
 family (one repo per game).
 
 ## Setup
 
 ```bash
-git clone https://github.com/linkharbor/linkharbor-minecraft-bedrock
-cd linkharbor-minecraft-bedrock
+git clone https://github.com/linkharbor/integration-minecraft-bedrock
+cd integration-minecraft-bedrock
 
 export LH_INGEST_URL="https://api.linkharbor.com/v1/ingest/123"   # dashboard → Integrations → Custom (API)
 export LH_INGEST_SECRET="…"
@@ -36,8 +36,8 @@ python3 agent.py --java --host play.example.com --port 25565 --address "play.exa
 ```
 
 Try `--once -v` first. Run it as a service with
-`linkharbor-minecraft-bedrock.service` (systemd; secrets go into
-`/etc/linkharbor-minecraft-bedrock.env`, `chmod 600`).
+`integration-minecraft-bedrock.service` (systemd; secrets go into
+`/etc/integration-minecraft-bedrock.env`, `chmod 600`).
 
 ## Events sent
 

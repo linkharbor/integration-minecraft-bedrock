@@ -1,0 +1,19 @@
+# systemd unit — copy to /etc/systemd/system/integration-minecraft-bedrock.service,
+# put the two secrets into /etc/integration-minecraft-bedrock.env (chmod 600):
+#   LH_INGEST_URL=https://api.linkharbor.com/v1/ingest/123
+#   LH_INGEST_SECRET=…
+[Unit]
+Description=LinkHarbor Minecraft Bedrock/Java ping agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/integration-minecraft-bedrock.env
+ExecStart=/usr/bin/python3 /opt/integration-minecraft-bedrock/agent.py --host 127.0.0.1 --port 19132 --address "play.example.com:19132"
+Restart=always
+RestartSec=10
+User=nobody
+
+[Install]
+WantedBy=multi-user.target
