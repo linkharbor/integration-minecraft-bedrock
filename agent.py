@@ -13,7 +13,7 @@ joined (only counts; Java lists a sample), so the events are count-based.
 For Java servers with Paper, the plugin in integration-minecraft gives you
 real join/leave events with names.
 
-    export LH_INGEST_URL="https://api.linkharbor.com/v1/ingest/123"
+    export LH_INGEST_URL="https://dock.at-harbor.com/v1/ingest/123"
     export LH_INGEST_SECRET="…"
     python3 agent.py --host play.example.com --port 19132 --address "play.example.com:19132"
     python3 agent.py --java --host play.example.com --port 25565

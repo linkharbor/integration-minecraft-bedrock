@@ -25,7 +25,7 @@ family (one repo per game).
 git clone https://github.com/linkharbor/integration-minecraft-bedrock
 cd integration-minecraft-bedrock
 
-export LH_INGEST_URL="https://api.linkharbor.com/v1/ingest/123"   # dashboard → Integrations → Custom (API)
+export LH_INGEST_URL="https://dock.at-harbor.com/v1/ingest/123"   # dashboard → Integrations → Custom (API)
 export LH_INGEST_SECRET="…"
 
 python3 agent.py --host play.example.com --port 19132 \
